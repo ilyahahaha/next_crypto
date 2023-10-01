@@ -1,6 +1,6 @@
 {
   "name": "next-crypto",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple encryption module for Next.JS edge runtime.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -11,19 +11,11 @@
   "author": "Ilya Kuchmenko <42113015+ilyahahaha@users.noreply.github.com>",
   "license": "MIT",
   "keywords": [
-    "cryptr",
-    "crypter",
     "encrypt",
     "decrypt",
     "encryption",
     "decryption",
-    "crypto",
-    "cipher",
-    "aes-256",
-    "aes256",
-    "aes-256-ctr",
-    "aes-256-gcm",
-    "hashr"
+    "nextjs"
   ],
   "bugs": {
     "url": "https://github.com/ilyahahaha/next_crypto/issues"
