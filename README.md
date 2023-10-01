@@ -1,8 +1,12 @@
 # Next Crypto
 
-Next Crypto uses aes-gcm encryption for encrypting and decrypting with Next.JS (created for running in edge runtime)
-You can encrypt any sensitive data and store it where you need (session data in cookies, etc..)
+Next Crypto uses aes-gcm encryption for encrypting and decrypting with Next.JS (created for running in edge runtime).
+
+You can encrypt any sensitive data and store it where you need (session data in cookies, etc..).
+
 You need only 1 required argument with your secret.
+
+Works async by default.
 
 ## Installation
 
@@ -25,6 +29,6 @@ import NextCrypto from 'next-crypto';
 
 const crypto = new NextCrypto('secret key');
 
-const encrypted = crypto.encrypt('hello!');
-const decrypted = crypto.decrypt(encrypted);
+const encrypted = await crypto.encrypt('hello!');
+const decrypted = await crypto.decrypt(encrypted);
 ```
