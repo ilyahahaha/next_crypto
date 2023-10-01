@@ -1,8 +1,8 @@
 declare class NextCrypto {
   constructor(secret: string);
 
-  static encrypt(plain: string): string;
-  static decrypt(encrypted: string): string;
+  static async encrypt(plain: string): Promise<string>;
+  static async decrypt(encrypted: string): Promise<string | null>;
 }
 
 export = NextCrypto;
