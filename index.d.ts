@@ -5,4 +5,4 @@ declare class NextCrypto {
   static async decrypt(encrypted: string): Promise<string | null>;
 }
 
-export = NextCrypto;
+export default NextCrypto;
