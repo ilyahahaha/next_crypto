@@ -43,8 +43,5 @@
     "prepare": "husky install",
     "format": "prettier --write --ignore-unknown .",
     "lint": "npx eslint ."
-  },
-  "lint-staged": {
-    "**/*": "npm run format && npm run lint"
   }
 }
