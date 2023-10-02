@@ -3,7 +3,7 @@ class NextCrypto {
     this.secret = secret;
   }
 
-  static async encrypt(plain) {
+  async encrypt(plain) {
     const iv = crypto.getRandomValues(new Uint8Array(12));
 
     const alg = { name: 'AES-GCM', iv };
@@ -36,7 +36,7 @@ class NextCrypto {
     ).toString('base64')}`;
   }
 
-  static async decrypt(encrypted) {
+  async decrypt(encrypted) {
     const ciphertext = encrypted.split(';')[0];
     const iv = encrypted.split(';')[1];
 
