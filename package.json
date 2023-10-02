@@ -1,6 +1,6 @@
 {
   "name": "next-crypto",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple encryption module for Next.JS edge runtime.",
   "main": "index.js",
   "types": "index.d.ts",
