@@ -75,4 +75,4 @@ class NextCrypto {
   }
 }
 
-export default NextCrypto;
+module.exports = NextCrypto;
