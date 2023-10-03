@@ -4,10 +4,16 @@ class NextCrypto {
   }
 
   async encrypt(plain) {
+    if (!crypto) {
+      throw new Error(
+        'No WebAPI crypto module found. Do you call me in the right place?',
+      );
+    }
+
     const iv = crypto.getRandomValues(new Uint8Array(12));
 
     const alg = { name: 'AES-GCM', iv };
-    const keyHash = crypto.subtle.digest(
+    const keyHash = await crypto.subtle.digest(
       'SHA-256',
       new TextEncoder().encode(this.secret),
     );
@@ -37,6 +43,12 @@ class NextCrypto {
   }
 
   async decrypt(encrypted) {
+    if (!crypto) {
+      throw new Error(
+        'No WebAPI crypto module found. Do you call me in the right place?',
+      );
+    }
+
     const ciphertext = encrypted.split(';')[0];
     const iv = encrypted.split(';')[1];
 
